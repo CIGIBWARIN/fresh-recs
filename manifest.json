@@ -20,7 +20,7 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "fresh-recs@cigib",
+      "id": "fresh-recs@cigibwarin",
       "strict_min_version": "140.0",
       "data_collection_permissions": { "required": ["none"] }
     }
