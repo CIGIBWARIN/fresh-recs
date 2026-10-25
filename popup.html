@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font: 13px system-ui, sans-serif; width: 280px; margin: 0; padding: 12px 14px; color: #222; background: #fff; }
+    @media (prefers-color-scheme: dark) { body { color: #eee; background: #2b2a33; } input, select { color-scheme: dark; } }
+    h1 { font-size: 15px; margin: 0 0 10px; }
+    label { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 7px 0; }
+    input[type=number] { width: 56px; }
+    hr { border: 0; border-top: 1px solid #8884; margin: 10px 0; }
+    .stats { opacity: .75; margin: 8px 0; }
+    button { width: 100%; padding: 6px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Fresh Recs</h1>
+  <label>Enabled <input type="checkbox" id="enabled"></label>
+  <label>Hide after shown this many times <input type="number" id="threshold" min="1" max="50"></label>
+  <label>Forget impressions after (days) <input type="number" id="expiryDays" min="1" max="365"></label>
+  <label>Hide videos I've watched <input type="checkbox" id="hideWatched"></label>
+  <hr>
+  <label>Home feed <input type="checkbox" id="home"></label>
+  <label>Watch page sidebar <input type="checkbox" id="sidebar"></label>
+  <label>Shorts in feeds <input type="checkbox" id="shorts"></label>
+  <label>Mode
+    <select id="mode">
+      <option value="hide">Hide</option>
+      <option value="dim">Dim (preview)</option>
+    </select>
+  </label>
+  <hr>
+  <div class="stats" id="stats">&nbsp;</div>
+  <button id="reset">Reset history</button>
+  <button id="unblock" style="margin-top:6px">Unhide videos I hid</button>
+  <p style="text-align:center;margin:10px 0 0"><a href="#" id="privacy" style="color:inherit;opacity:.7">Privacy policy</a></p>
+  <script src="popup.js"></script>
+</body>
+</html>

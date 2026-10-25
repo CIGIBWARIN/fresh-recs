@@ -1,0 +1,71 @@
+[data-yrf="hide"] {
+  display: none !important;
+}
+
+.yrf-host {
+  position: relative !important;
+}
+
+.yrf-x {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 1000;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  font: 600 14px/28px system-ui, sans-serif;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.yrf-host:hover > .yrf-x {
+  opacity: 1;
+}
+
+.yrf-x:hover {
+  background: #e53935;
+}
+
+[data-yrf] > .yrf-x {
+  display: none;
+}
+
+#yrf-toast {
+  position: fixed;
+  left: 24px;
+  bottom: 24px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #323232;
+  color: #fff;
+  font: 14px system-ui, sans-serif;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+#yrf-toast[hidden] {
+  display: none;
+}
+
+#yrf-toast button {
+  border: 0;
+  background: none;
+  color: #3ea6ff;
+  font: 600 14px system-ui, sans-serif;
+  cursor: pointer;
+}
+
+[data-yrf="dim"] {
+  opacity: 0.25 !important;
+  outline: 2px dashed #e53935 !important;
+  outline-offset: -2px;
+}

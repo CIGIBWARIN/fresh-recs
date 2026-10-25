@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Fresh Recs for YouTube",
+  "version": "1.1.0",
+  "description": "Hides YouTube recommendations you've already been shown too many times, or already watched, so refreshing gives you something new.",
+  "icons": { "48": "icon.svg", "96": "icon.svg" },
+  "permissions": ["storage", "*://www.youtube.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "browser_action": {
+    "default_title": "Fresh Recs",
+    "default_popup": "popup.html",
+    "default_icon": "icon.svg"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "fresh-recs@cigib",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": { "required": ["none"] }
+    }
+  }
+}
